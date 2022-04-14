@@ -1,0 +1,7 @@
+**/cmake-build-debug/
+gcc-arm-none-eabi-9-2020-q2-update/
+libusb_stm32/
+STM32F4xx_DSP_StdPeriph_Lib_V1.9.0/
+googletest/
+**/cmake-build-debug/
+.idea/

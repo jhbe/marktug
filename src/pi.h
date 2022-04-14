@@ -1,0 +1,6 @@
+#ifndef MARKTUG_PI_H
+#define MARKTUG_PI_H
+
+#define PI 3.14159265358979323846
+
+#endif

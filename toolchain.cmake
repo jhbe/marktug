@@ -1,0 +1,34 @@
+set(CMAKE_SYSTEM_NAME Linux)
+set(CMAKE_SYSTEM_PROCESSOR arm)
+
+set(REPO ${CMAKE_CURRENT_LIST_DIR})
+set(TOOLS_PREFIX ${REPO}/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-)
+
+# @formatter:off
+set(CMAKE_C_COMPILER   ${TOOLS_PREFIX}gcc)
+set(CMAKE_CXX_COMPILER ${TOOLS_PREFIX}g++)
+set(CMAKE_LINKER       ${TOOLS_PREFIX}ld)
+set(CMAKE_ASM_COMPILER ${TOOLS_PREFIX}gcc)
+set(CMAKE_OBJCOPY      ${TOOLS_PREFIX}objcopy)
+set(CMAKE_STRIP        ${TOOLS_PREFIX}strip)
+set(CMAKE_CPP          ${TOOLS_PREFIX}cpp)
+# @formatter:on
+
+set(CMAKE_FIND_ROOT_PATH ${REPO}/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1)
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+
+set(STDPERIPH_LIBRARIES ${REPO}/STM32F4xx_DSP_StdPeriph_Lib_V1.8.0/Libraries)
+set(USB_STM32_LIBRARIES ${REPO}/libusb_stm32)
+
+# @formatter:off
+set(CMSIS_INC     ${STDPERIPH_LIBRARIES}/CMSIS/Include)
+set(DEVICE_INC    ${STDPERIPH_LIBRARIES}/CMSIS/Device/ST/STM32F4xx/Include)
+set(STDPERIPH_INC ${STDPERIPH_LIBRARIES}/STM32F4xx_StdPeriph_Driver/inc)
+set(STDPERIPH_SRC ${STDPERIPH_LIBRARIES}/STM32F4xx_StdPeriph_Driver/src)
+set(LIB_CORE_INC  ${USB_STM32_LIBRARIES}/CMSIS/CMSIS/Core/Include)
+set(LIB_DEV_INC   ${USB_STM32_LIBRARIES}/CMSIS/Device/ST)
+set(LIB_USB_INC   ${USB_STM32_LIBRARIES}/inc)
+set(LIB_USB_SRC   ${USB_STM32_LIBRARIES}/src)
+# @formatter:on
+
